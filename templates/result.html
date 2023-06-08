@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Result</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .container {
+            max-width: 800px;
+            margin-top: 100px;
+            box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            background-color: #fff;
+            border-radius: 5px;
+        }
+        .result-box {
+            text-decoration: solid;
+            padding: 15px;
+            border: 1px solid #ced4da;
+            border-radius: 5px;
+            background-color: #f8f9fa;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center mb-4">Result:</h1>
+        <div class="mb-3">
+            <label for="value1">Text Output:</label>
+            <div class="result-box">
+                <p id="value1">{{ text_output }}</p>
+            </div>
+        </div>
+        <div class="mb-3">
+            <label for="value2">Formatted Text:</label>
+            <div class="result-box">
+                {% for line in formatted_text.split('\n') %}
+                    <p>{{ line }}</p>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="text-center">
+            <a href="/" class="btn btn-primary">Go Back</a>
+        </div>
+    </div>
+</body>
+</html>
